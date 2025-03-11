@@ -32,6 +32,9 @@ table td:hover{
 	background-color: hotpink;
 }
 h1{
+	text-align: left;
+}
+h2{
 	color: #ff00bd;
 	text-align: center;
 }
