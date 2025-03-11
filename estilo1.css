@@ -1,0 +1,41 @@
+/* Hoja de estilos Externa */
+body{
+	background-color: #ffdbf1;
+	font-family: arial, verdana, sans-seridf;
+}
+table{
+	width: 90%;
+	margin: auto;
+	border: 2px solid #d559a5;
+	border-collapse: collapse;
+	caption-side: top; /* top o bottom */;
+}
+th,td{
+	border: 1px solid #d559a5;
+}
+table tr:nth-child(odd){
+	background-color: white;
+}
+table tr:nth-child(even){
+	background-color: lightpink;
+}
+th{
+	background-color: lightpink;
+	color: #ff009d;
+	padding: 14px;
+}
+td{
+	padding: 12px;
+	text-align: justify;
+}
+table td:hover{
+	background-color: hotpink;
+}
+h1{
+	color: #ff00bd;
+	text-align: center;
+}
+caption{
+	color: #b80071;
+	font-weight: bold;
+}
