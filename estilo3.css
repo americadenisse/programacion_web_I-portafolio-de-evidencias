@@ -1,0 +1,56 @@
+/* Hoja de estilos Externa */
+.capa1{
+	margin-left: 25%;
+	padding: 12px;
+	height: 1000px;
+}
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 20%;
+	height: 100%;
+	position: fixed;
+	background-color: #ffffff;
+	overflow: auto;
+}
+li a{
+	display: block;
+	background-color: white;
+	padding: 8px 10px;
+	text-decoration: none;
+	color: #000000;
+}
+li a:hover{
+	background-color: #f3cb00;
+	color: #ffffff;
+}
+li a.activo{
+	background-color: #f3cb00;
+	color: #ffffff;
+}
+li a:hover:not(.activo){
+	background-color: #ffde5c;
+	color: #ffffff;
+}
+
+/* me */
+body{
+	background-color: #fff6af;
+	font-family: arial, verdana, sans-seridf;
+}
+h1{
+	font-family: "Lobster", arial, calibri, sans-serif;
+	color: #000000;
+}
+h2{
+	font-family: "Shadows Into Light Two", arial, calibri, cursive;
+	text-align: left;
+}
+@font-face{
+		font-family: "parrafos";
+		src: url(Sour_Gummy/SourGummy-Italic-VariableFont_wdth,wght.ttf) format("truetype");
+}
+p{
+	font-family: 'parrafos';
+}
