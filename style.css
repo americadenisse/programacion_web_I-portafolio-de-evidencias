@@ -1,130 +1,57 @@
-body {
-    font-family: "Racing Sans One", sans-serif;
-    background-color: #F8C18C;
-    margin: 0;
-    padding: 0;
+.contenedor{
+	position: relative;
+	top: 50px;
+	background: #acef3d;
+	height: 150px;
+	z-index: 2;
 }
-
-main {
-    width: 100%;
-    max-width: 1000px;
-    background-color: #f01d10;
-    margin: 20px auto;
-    border-radius: 20px;
-    padding: 10px;
+.c1{
+	position: relative;
+	height: 50px;
+	left: 50px;
+	top: 25px;
+	background: #d9ff9a;
+	z-index: 1;
 }
-
-header {
-    text-align: center;
+.c2{
+	position: absolute;
+	background: #9affa4;
+	right: 25px;
+	z-index: 1;
+	height: 150px;
+	width: 150px;
 }
-
-header img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 20px;
+.c3{
+	position: absolute;
+	background: #9af7ff;
+	width: 150px;
+	height: 150px;
+	z-index: 2;
 }
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    margin: 10px 0;
+.c4{
+	position: absolute;
+	background: #76c2ff;
+	width: 150px;
+	height: 200px;
+	top: 120px;
+	left: 50px;
+	z-index: 3;
 }
-
-nav button {
-    font-family: "Knewave", system-ui;
-    background-color: orange;
-    border: none;
-    padding: 8px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
+.c5{
+	border: 2px solid #5862ff;
+	width: 200px;
+	height: 50px;
+	position: fixed;
+	background: #8e95ff;
+	bottom: 0px; /* top bottom rigth left */
+	right: 0px;
+	z-index: 4;
 }
-
-section {
-    text-align: center;
-    margin: 10px 0;
+/* me */
+h1{
+	font-family: "Rubik Moonrocks", sans-serif;
+	/*font-family: "Rampart One", sans-serif;*/
 }
-
-article {
-    background-color: purple;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 10px 0;
-}
-
-article h3 {
-    font-size: 20px;
-}
-
-article span {
-    font-size: 22px;
-    font-weight: bold;
-    background-color: red;
-    padding: 5px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-article img {
-    width: 100%;
-    max-width: 200px;
-}
-
-button {
-    font-family: "Knewave", system-ui;
-    background-color: yellow;
-    border: none;
-    padding: 10px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-a {
-    display: block;
-    text-decoration: none;
-    background-color: lightgray;
-    text-align: center;
-    padding: 5px;
-    color: blue;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-aside {
-    background-color: yellow;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-}
-
-figure img {
-    width: 350px;
-    border-radius: 10px;
-}
-
-footer {
-    text-align: center;
-    margin-top: 10px;
-}
-
-footer button {
-    font-family: "Knewave", system-ui;
-    background-color: blue;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-}
-
-h2{
-    font-family: "Racing Sans One", sans-serif;
-    color: white;
-}
-
-h3{
-    font-family: "Racing Sans One", sans-serif;
-    color: white;
+p{
+	font-family: "Barlow Condensed", sans-serif;
 }
