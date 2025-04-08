@@ -1,0 +1,49 @@
+body{
+	background-color: #b8abff;
+}
+h1{
+	font-family: "Limelight", sans-serif;
+	color: #3946ff;
+}
+h2{
+	font-family: "Limelight", sans-serif;
+	color: #00087b;
+}
+img{
+	border: 4px dashed #4b47ff;
+	width: 200px;
+	height: 200px;
+	margin: 4px;
+}
+.galeria .imagen{
+    display: inline-block;
+}
+.imagen img:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s ease, border-color 0.5s ease;
+  border-color: #ffab4b;
+}
+button{
+	font-family: "Limelight", sans-serif;
+	font-size: 20px;
+	background-color: #3946ff;
+	color: #ffffff;
+	margin: 40px;
+	padding: 2px;
+}
+button:hover{
+	font-family: "Limelight", sans-serif;
+	background-color: #ffffff;
+	color: #3946ff;
+}
+.galeria{
+    display: block;
+}
+#mostrar:hover{
+	font-family: "Limelight", sans-serif;
+    background-color: #8c4dff;
+    color: #3400ff;
+}
+#mostrar:hover+label+.galeria{
+    display: none;
+}
