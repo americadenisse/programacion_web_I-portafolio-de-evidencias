@@ -1,0 +1,41 @@
+body{
+	background-color: #b4ff89;
+}
+h1{
+	font-family: "Limelight", sans-serif;
+}
+p{
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 30px;
+}
+input[type="button"]{
+	font-family: "Limelight", sans-serif;
+    color: #ffffff;
+    background-color: #8eff4d;
+    border: 1px dotted #56ed00;
+    padding: 10px;
+}
+input[type="button"]:hover{
+    background-color: #4ed700;
+}
+ label, input[type="text"]{
+ 	display: block;
+ 	margin: 10px auto;
+}
+.casilla{
+	background-color: #ffffff;
+	width: 600px;
+  	height: 400px;
+  	border: 3px dotted #00cc00;
+  	border-radius: 15px;
+  	margin: 20px auto;
+}
+label{
+	font-weight: bold;
+	font-size: 18px;
+	margin-right: 5px;
+}
+form{
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 18px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylep1-p3.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Limelight&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+	<title>Práctica 1 - Operaciones con JavaScript</title>
+
+	<script type="text/javascript">
+	/* Funcion suma */
+		function sumar(){
+			var n1=document.getElementById("num1").value;
+			var n2=document.getElementById("num2").value;
+			var r=parseInt(n1)+parseInt(n2);
+			/* alert(r); */
+			document.getElementById("resultado").innerHTML=r;
+		}
+	/* Funcion resta */
+		function restar(){
+			var n1=document.getElementById("num1").value;
+			var n2=document.getElementById("num2").value;
+			var r=parseInt(n1)-parseInt(n2);
+			/* alert(r); */
+			document.getElementById("resultado").innerHTML=r;
+		}
+	/* Funcion multiplicación */
+		function multiplicar(){
+			var n1=document.getElementById("num1").value;
+			var n2=document.getElementById("num2").value;
+			var r=parseInt(n1)*parseInt(n2);
+			/* alert(r); */
+			document.getElementById("resultado").innerHTML=r;
+		}
+	/* Funcion división */
+		function dividir(){
+			var n1=document.getElementById("num1").value;
+			var n2=document.getElementById("num2").value;
+			var r=parseInt(n1)/parseInt(n2);
+			/* alert(r); */
+			document.getElementById("resultado").innerHTML=r;
+		}
+	</script>
+
+</head>
+<body>
+	<center>
+	<div class="titulo">
+		<h1>Operaciones con JavaSript</h1>
+	</div>
+	<div class="casilla">
+	<form>
+		<label for="num1">Número:</label>
+		<input type="text" name="num1" id="num1" placeholder="Numero 1"><br/>
+		<label for="num2">Número:</label>
+		<input type="text" name="num2" id="num2" placeholder="Numero 2"><br/>
+
+		<input type="button" name="suma" id="suma" value="Suma" onclick="sumar()">
+		<input type="button" name="resta" id="resta" value="Resta" onclick="restar()">
+		<input type="button" name="multiplicacion" id="multiplicacion" value="Multiplicacion" onclick="multiplicar()">
+		<input type="button" name="division" id="division" value="Division" onclick="dividir()"><br/>
+		El resultado es:
+		<p id="resultado"></p>
+	</form>
+	</div>
+	</center>
+	
+</body>
+</html>
