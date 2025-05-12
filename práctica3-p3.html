@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Diagnóstico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        canvas {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Diagnóstico</h1>
+    <form id="diagnosticForm">
+        <div>
+            <label for="question1">¿Cuánto es 1+1?</label>
+            <input type="text" id="question1" name="question1">
+        </div>
+        <div>
+            <label for="question2">¿Cuánto es 2+1?</label>
+            <input type="text" id="question2" name="question2">
+        </div>
+        <button type="button" onclick="evaluateForm()">Evaluar</button>
+    </form>
+    <div id="result"></div>
+    <canvas id="chart"></canvas>
+    <button onclick="generatePDF()">Generar PDF</button>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        function evaluateForm() {
+            const form = document.getElementById('diagnosticForm');
+            const resultDiv = document.getElementById('result');
+            let score = 0;
+            let totalQuestions = 2;
+
+            // Evaluar cada pregunta
+            if (form.question1.value === '2') {
+                score++;
+            }
+            if (form.question2.value === '3') {
+                score++;
+            }
+
+            // Mostrar la calificación
+            resultDiv.innerHTML = `Calificación: ${score} / ${totalQuestions}`;
+
+            // Generar gráfico
+            generateChart(score, totalQuestions);
+        }
+
+        function generateChart(score, totalQuestions) {
+            const ctx = document.getElementById('chart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Pregunta 1', 'Pregunta 2'],
+                    datasets: [{
+                        label: 'Puntos',
+                        data: [score, totalQuestions - score],
+                        backgroundColor: ['#4CAF50', '#FF0000']
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.text('Calificación del Diagnóstico', 10, 10);
+            doc.text(document.getElementById('result').innerText, 10, 20);
+
+            // Agregar gráfico al PDF
+            const canvas = document.getElementById('chart');
+            const imgData = canvas.toDataURL('image/png');
+            doc.addImage(imgData, 'PNG', 10, 30, 180, 100);
+
+            doc.save('diagnostico.pdf');
+        }
+    </script>
+</body>
+</html>
