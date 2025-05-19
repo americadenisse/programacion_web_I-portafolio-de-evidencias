@@ -1,0 +1,63 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #8db4ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+h1{
+    font-family: "Yusei Magic", sans-serif;
+    text-align: center;
+    color: #0043c3;
+}
+label{
+    font-family: "Yusei Magic", sans-serif;
+    display: block;
+    margin: 10px 0 5px;
+}
+p{
+    font-family: "Yusei Magic", sans-serif;
+}
+input[type="number"]{
+    font-family: "Yusei Magic", sans-serif;
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="submit"]{
+    font-family: "Yusei Magic", sans-serif;
+    width: 80%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+input[type="submit"]:hover{
+    font-family: "Yusei Magic", sans-serif;
+    background: #0043c3;
+    margin-top: 20px;
+}
+.result{
+    font-family: "Yusei Magic", sans-serif;
+    margin-top: 20px;
+    padding: 10px;
+    background: #e2e2e2;
+    border-radius: 5px;
+}
